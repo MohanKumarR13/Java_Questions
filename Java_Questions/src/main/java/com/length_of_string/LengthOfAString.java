@@ -1,4 +1,4 @@
-package com.lenth_of_string;
+package com.length_of_string;
 
 public class LengthOfAString {
 
