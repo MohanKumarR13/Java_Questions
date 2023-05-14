@@ -27,8 +27,17 @@ public class FindOccuranceOfACharInString {
 		System.out.println(actualLength - lengthAfterReplaceing);
 	}
 
+	public static void countCharacterOccurance() {
+		String str = "Java Learning";
+		int totalCount = str.length();// Total Length
+		int totalCount_AfterRemove = str.replace("a", "").length();
+		int count = totalCount - totalCount_AfterRemove;
+		System.out.println("Number Of Occurance of a is :" + count);
+	}
+
 	public static void main(String[] args) {
 		usingIteration();
 		withOutIteration();
+		countCharacterOccurance();
 	}
 }
