@@ -17,7 +17,7 @@ public class findDuplicateChar {
 }
 
 =============================================***************************************************************=========================================================================
-	public class Main
+	public class NoOfCharOccurance
 {
     
 public static void main(String args[]) {
