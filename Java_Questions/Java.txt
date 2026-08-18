@@ -122,3 +122,63 @@ Output:
 1 2 3 5 8
 
 The second one is good to remember for basic Java interviews: compare → swap.
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        String str1 = "listen";
+        String str2 = "silent";
+
+        if (str1.length() != str2.length()) {
+            System.out.println("Not Anagram");
+            return;
+        }
+
+        int[] count = new int[26];
+
+        for (int i = 0; i < str1.length(); i++) {
+            count[str1.charAt(i) - 'a']++;
+            count[str2.charAt(i) - 'a']--;
+        }
+
+        for (int n : count) {
+            if (n != 0) {
+                System.out.println("Not Anagram");
+                return;
+            }
+        }
+
+        System.out.println("Anagram");
+    }
+}
+
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int num = n;
+        int sum = 0;
+
+        while (n > 0) {
+            int d = n % 10;
+            sum += d * d * d;
+            n /= 10;
+        }
+
+        if (sum == num)
+            System.out.println("Armstrong");
+        else
+            System.out.println("Not Armstrong");
+    }
+}
