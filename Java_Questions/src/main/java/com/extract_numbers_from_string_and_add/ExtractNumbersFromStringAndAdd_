@@ -1,6 +1,6 @@
 public class ExtractNumbersFromStringAndAdd {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
         String str = "abc123xyz4";
         int sum = 0;
@@ -10,7 +10,12 @@ public class ExtractNumbersFromStringAndAdd {
             char ch = str.charAt(i);
 
             if (ch >= '0' && ch <= '9') {
-                sum = sum + (ch - '0');
+
+                int digit = ch - '0';
+
+               // System.out.println(digit);
+
+                sum = sum + digit;
             }
         }
 
