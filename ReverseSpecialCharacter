@@ -1,0 +1,39 @@
+public class ReverseSpecialCharacter {
+
+    static boolean special(char c) {
+        if ((c >= 'A' && c <= 'Z') ||
+            (c >= 'a' && c <= 'z') ||
+            (c >= '0' && c <= '9'))
+            return false;
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        String str = "ra@j1e#ev";
+        char[] ch = str.toCharArray();
+
+        int i = 0;
+        int j = ch.length - 1;
+
+        while (i < j) {
+
+            if (!special(ch[i]))
+                i++;
+
+            else if (!special(ch[j]))
+                j--;
+
+            else {
+                char temp = ch[i];
+                ch[i] = ch[j];
+                ch[j] = temp;
+                i++;
+                j--;
+            }
+        }
+
+        System.out.println(new String(ch));
+    }
+}
